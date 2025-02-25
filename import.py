@@ -109,9 +109,9 @@ class MinecraftLauncher(tk.Tk):
         server_port = "25565" if selected_server == "Vanilla" else "25566"
 
 
-
-        java_path = r"/Minecraft/jre/java-runtime-gamma/windows-x64/java-runtime-gamma/bin/javaw.exe"
-        minecraft_dir = r"/Minecraft/game"
+        
+        java_path = os.path.join("Minecraft", "jre", "java-runtime-gamma", "windows-x64", "java-runtime-gamma", "bin", "javaw.exe")
+        minecraft_dir = os.path.join("Minecraft", "game") # Fixed paths
         natives_dir = os.path.join(minecraft_dir, "versions", "1.20.4", "natives")
         libraries = [
             os.path.join(minecraft_dir, "libraries", "com", "github", "oshi", "oshi-core", "6.4.5", "oshi-core-6.4.5.jar"),
